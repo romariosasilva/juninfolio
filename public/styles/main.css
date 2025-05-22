@@ -1,0 +1,120 @@
+:root {
+	--color-secondary: #04D361;
+	--color-secondary-dark: #04BF58;
+	--color-text-base: #6A6180;
+	--color-button-text: #FFFFFF;
+
+	--color-border-pulse-initial: #916BEACC;
+	--color-border-pulse-final: #916BEA00;
+	font-size: 60%;
+}
+
+.magenta-theme {
+	--color-primary: #EFEAF0;
+	--color-primary-lighter: #EC0C52;
+	--color-primary-light: #BA082C;
+	--color-title-in-primary: #EC0C52;
+	--color-text-in-primary: #D26F8E;
+	--color-border-pulse-initial: #BA082CCC;
+	--color-border-pulse-final: #BA082C00;
+}
+
+.purple-theme {
+	--color-primary: #8257E5;
+	--color-primary-lighter: #9871F5;
+	--color-primary-light: #916BEA;
+	--color-title-in-primary: #FFFFFF;
+	--color-text-in-primary: #D4C2FF;
+	--color-border-pulse-initial: #916BEACC;
+	--color-border-pulse-final: #916BEA00;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+body {
+	background: var(--color-primary);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2rem;
+	transition: 1s;
+}
+
+body,
+input,
+button,
+textarea {
+	font-weight: 500;
+	font-family: Poppins;
+	font-size: 1.6rem;
+	color: var(--color-text-base);
+}
+
+.material-symbols-outlined.no-filled {
+	font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 24
+}
+
+.material-symbols-outlined.filled {
+	font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24
+}
+
+.material-symbols-outlined.symbol-lg,
+.material-symbols-outlined-filled.symbol-lg {
+	font-size: 4rem !important;
+}
+
+.material-symbols-outlined.symbol-md,
+.material-symbols-outlined-filled.symbol-md {
+	font-size: 2.5rem !important;
+}
+
+.material-symbols-outlined.symbol-sm,
+.material-symbols-outlined-filled.symbol-sm {
+	font-size: 1.6rem !important;
+}
+
+.switch-theme {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  height: 5.5rem;
+  width: 5.5rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.pulse {
+	border-radius: 50%;
+	box-shadow: 0px 0px 1px 1px #0000001a;
+	animation: pulse-animation 2s infinite;
+}
+
+@media (min-width: 700px) {
+	:root {
+		font-size: 62.5%;
+	}
+}
+
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+	}
+}
