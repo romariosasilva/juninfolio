@@ -1,5 +1,6 @@
 import express from 'express';
 import nunjucksPkg from 'nunjucks';
+import path from 'path';
 import { fileURLToPath } from 'url';
 import { pageHome, pageProfile, pageWorks, pageContact } from './pages.js';
 
