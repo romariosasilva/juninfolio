@@ -18,5 +18,8 @@ server
 	.get("/", pageHome)								// Rota da pagina Home
 	.get("/profile", pageProfile)					// Rota da pagina Profile
 	.get("/works", pageWorks)						// Rota da pagina Works
-	.get("/works", pageContact)						// Rota da pagina Contact
-	.listen(5500);									// Inicializacao do servidor
+	.get("/works", pageContact);					// Rota da pagina Contact
+
+
+// Exporta como função handler para Vercel
+export default server;

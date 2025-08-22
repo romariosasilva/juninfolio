@@ -62,7 +62,10 @@
 					{% if social_icon.data != "" %}
 					<li class="icon {{social_icon.icon}}">
 						<span class="tooltip">{{social_icon.icon}}</span>
-						<span><i class="fab fa-{{social_icon.icon}}" href="{{social_icon.data}}"></i></span>
+						<span>
+							<i class="fab fa-{{social_icon.icon}}"></i>
+							<a href="{{social_icon.data}}" target="_blank" rel="noopener noreferrer"></a>
+						</span>
 					</li>
 					{% endif %}
 				{% endfor %}

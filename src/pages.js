@@ -46,7 +46,7 @@ export async function pageHome(req, res)
 	}
 	catch (error)
 	{
-		console.log(error);
+		// console.log(error);
 		return res.render("404.html" );
 	}
 }
@@ -59,7 +59,7 @@ export function pageProfile(req, res)
 	}
 	catch (error)
 	{
-		console.log(error);
+		// console.log(error);
 		return res.render("404.html" );
 	}
 }
@@ -87,7 +87,7 @@ export async function pageWorks(req, res)
 	}
 	catch (error)
 	{
-		console.log(error);
+		// console.log(error);
 		return res.render("404.html" );
 	}
 }
@@ -100,7 +100,7 @@ export function pageContact(req, res)
 	}
 	catch (error)
 	{
-		console.log(error);
+		// console.log(error);
 		return res.render("404.html" );
 	}
 }
