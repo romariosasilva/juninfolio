@@ -1,12 +1,17 @@
 import express from 'express';
 import nunjucksPkg from 'nunjucks';
+import { fileURLToPath } from 'url';
 import { pageHome, pageProfile, pageWorks, pageContact } from './pages.js';
+
+// Para compatibilidade com ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configuracao nunjucks (template engine)
 const { configure } = nunjucksPkg;
 
 const server = express();
-configure('src/views', {
+configure(path.join(__dirname, 'views'), {
 	express: server,
 	noCache: true,
 });
